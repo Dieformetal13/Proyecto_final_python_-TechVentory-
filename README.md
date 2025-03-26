@@ -1,10 +1,10 @@
 INSTRUCCIONES PARA EL SISTEMA DE GESTIÓN DE INVENTARIO
 ======================================================
 
-Descripción General
+DESCRIPCIÓN GENERAL
 Este proyecto es un sistema completo de gestión de inventario desarrollado con Flask, que incluye autenticación de usuarios, gestión de productos y proveedores, carrito de compras, dashboard administrativo y cliente, y generación de reportes estadísticos.
 
-Requisitos
+REQUISITOS
 Python 3.6 o superior
 
 Bibliotecas requeridas (instaladas automáticamente mediante requirements.txt):
@@ -29,7 +29,8 @@ alembic
 
 blinker
 
-Estructura de Archivos Principales
+ESTRUCTURA DE ARCHIVOS PRINCIPALES
+
 main.py: Punto de entrada principal de la aplicación Flask.
 
 models.py: Define todos los modelos de la base de datos.
@@ -50,7 +51,8 @@ requirements.txt: Lista de dependencias necesarias.
 
 templates/: Directorio con todas las plantillas HTML.
 
-Instrucciones de Ejecución
+INSTRUCCIONES DE EJECUUCIÓN
+
 Preparación:
 
 Instala las dependencias: pip install -r requirements.txt
@@ -75,7 +77,7 @@ Esto creará:
 
 Ventas y compras de ejemplo
 
-Ejecución:
+EJECUCIÓN
 
 Inicia la aplicación: python main.py
 
@@ -87,8 +89,10 @@ Como administrador: usuario "admin", contraseña "admin123"
 
 Como cliente: usuarios "user0" a "user9", contraseñas "password0" a "password9"
 
-Descripción de los Archivos Principales
+DESCRIPCIÓN DE LOS ARCHIVOS PRINCIPALES
+
 main.py
+
 Crea y configura la aplicación Flask.
 
 Configura la base de datos (SQLite por defecto).
@@ -102,6 +106,7 @@ Registra blueprints y manejadores de errores.
 Crea las tablas de la base de datos.
 
 models.py
+
 Define todos los modelos de la base de datos:
 
 User: Usuarios del sistema (admin/clientes)
@@ -119,6 +124,7 @@ Purchase y PurchaseItem: Compras a proveedores
 CartItem: Productos en el carrito de compras
 
 routes.py
+
 Contiene toda la lógica de la aplicación organizada en blueprints:
 
 Rutas de autenticación (login, logout, registro)
@@ -136,6 +142,7 @@ API para operaciones AJAX
 Reportes estadísticos
 
 forms.py
+
 Define los formularios utilizados:
 
 LoginForm: Para inicio de sesión
@@ -151,6 +158,7 @@ AddToCartForm: Para añadir productos al carrito
 CheckoutForm: Para finalizar compras
 
 extensions.py
+
 Inicializa las extensiones de Flask:
 
 SQLAlchemy (para la base de datos)
@@ -164,6 +172,7 @@ CSRFProtect (para protección CSRF)
 Mail (para envío de emails)
 
 error_handlers.py
+
 Maneja los errores de la aplicación:
 
 Error 403 (Acceso prohibido)
@@ -175,6 +184,7 @@ Error 500 (Error interno del servidor)
 Excepciones no manejadas
 
 populate_db.py
+
 Script para poblar la base de datos con datos de prueba realistas:
 
 Usuarios, categorías, proveedores y productos
@@ -183,7 +193,8 @@ Ventas y compras de ejemplo
 
 Productos con bajo stock
 
-Características Principales
+CARACTERÍSTICAS PRINCIPALES
+
 Autenticación y Autorización:
 
 Login/logout para usuarios
@@ -242,7 +253,8 @@ Actualización dinámica de datos
 
 Gráficos interactivos
 
-Posibles Problemas y Soluciones
+POSIBLES PROBLEMAS Y SOLUCIONES
+
 Error al iniciar la aplicación:
 
 Verifica que todas las dependencias estén instaladas (pip install -r requirements.txt)
@@ -267,7 +279,8 @@ Configura correctamente las variables MAIL_* en main.py
 
 La configuración por defecto es para pruebas locales
 
-Notas Adicionales
+NOTAS ADICIONALES
+
 La aplicación usa SQLite por defecto para facilitar las pruebas. Para producción, considera usar PostgreSQL o MySQL.
 
 El modo debug está activado por defecto. Desactívalo para producción.
