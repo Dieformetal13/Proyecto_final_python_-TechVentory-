@@ -1,13 +1,13 @@
-INSTRUCCIONES PARA EL SISTEMA DE GESTIÓN DE INVENTARIO
+# **INSTRUCCIONES PARA EL SISTEMA DE GESTIÓN DE INVENTARIO**
 ======================================================
 
-DESCRIPCIÓN GENERAL
+# **DESCRIPCIÓN GENERAL**
 Este proyecto es un sistema completo de gestión de inventario desarrollado con Flask, que incluye autenticación de usuarios, gestión de productos y proveedores, carrito de compras, dashboard administrativo y cliente, y generación de reportes estadísticos.
 
-REQUISITOS
+# **REQUISITOS**
 Python 3.6 o superior
 
-Bibliotecas requeridas (instaladas automáticamente mediante requirements.txt):
+**Bibliotecas requeridas** (instaladas automáticamente mediante requirements.txt):
 
 Flask
 
@@ -29,37 +29,37 @@ alembic
 
 blinker
 
-ESTRUCTURA DE ARCHIVOS PRINCIPALES
+# **ESTRUCTURA DE ARCHIVOS PRINCIPALES**
 
-main.py: Punto de entrada principal de la aplicación Flask.
+**main.py:** Punto de entrada principal de la aplicación Flask.
 
-models.py: Define todos los modelos de la base de datos.
+**models.py:** Define todos los modelos de la base de datos.
 
-routes.py: Contiene todas las rutas y lógica de la aplicación.
+**routes.py:** Contiene todas las rutas y lógica de la aplicación.
 
-forms.py: Define los formularios utilizados en la aplicación.
+**forms.py:** Define los formularios utilizados en la aplicación.
 
-extensions.py: Inicializa las extensiones de Flask.
+**extensions.py:** Inicializa las extensiones de Flask.
 
-error_handlers.py: Maneja los errores de la aplicación.
+**error_handlers.py:** Maneja los errores de la aplicación.
 
-populate_db.py: Script para poblar la base de datos con datos de prueba.
+**populate_db.py:** Script para poblar la base de datos con datos de prueba.
 
-charts.js: Contiene la lógica para generar gráficos en el frontend.
+**charts.js:** Contiene la lógica para generar gráficos en el frontend.
 
-requirements.txt: Lista de dependencias necesarias.
+**requirements.txt:** Lista de dependencias necesarias.
 
-templates/: Directorio con todas las plantillas HTML.
+**templates/:** Directorio con todas las plantillas HTML.
 
-INSTRUCCIONES DE EJECUUCIÓN
+# **INSTRUCCIONES DE EJECUCIÓN**
 
-Preparación:
+**Preparación:**
 
 Instala las dependencias: pip install -r requirements.txt
 
 Crea la base de datos ejecutando: python main.py (se creará automáticamente)
 
-Población de datos inicial (opcional):
+**Población de datos inicial (opcional):**
 
 Para cargar datos de prueba ejecuta: python populate_db.py
 
@@ -77,21 +77,21 @@ Esto creará:
 
 Ventas y compras de ejemplo
 
-EJECUCIÓN
+**EJECUCIÓN**
 
 Inicia la aplicación: python main.py
 
 La aplicación estará disponible en: http://localhost:5000
 
-Acceso:
+**Acceso:**
 
 Como administrador: usuario "admin", contraseña "admin123"
 
 Como cliente: usuarios "user0" a "user9", contraseñas "password0" a "password9"
 
-DESCRIPCIÓN DE LOS ARCHIVOS PRINCIPALES
+# **DESCRIPCIÓN DE LOS ARCHIVOS PRINCIPALES**
 
-main.py
+**main.py**
 
 Crea y configura la aplicación Flask.
 
@@ -105,7 +105,7 @@ Registra blueprints y manejadores de errores.
 
 Crea las tablas de la base de datos.
 
-models.py
+**models.py**
 
 Define todos los modelos de la base de datos:
 
@@ -123,7 +123,7 @@ Purchase y PurchaseItem: Compras a proveedores
 
 CartItem: Productos en el carrito de compras
 
-routes.py
+**routes.py**
 
 Contiene toda la lógica de la aplicación organizada en blueprints:
 
@@ -141,7 +141,7 @@ API para operaciones AJAX
 
 Reportes estadísticos
 
-forms.py
+**forms.py**
 
 Define los formularios utilizados:
 
@@ -157,7 +157,7 @@ AddToCartForm: Para añadir productos al carrito
 
 CheckoutForm: Para finalizar compras
 
-extensions.py
+**extensions.py**
 
 Inicializa las extensiones de Flask:
 
@@ -171,7 +171,7 @@ CSRFProtect (para protección CSRF)
 
 Mail (para envío de emails)
 
-error_handlers.py
+**error_handlers.py**
 
 Maneja los errores de la aplicación:
 
@@ -183,7 +183,7 @@ Error 500 (Error interno del servidor)
 
 Excepciones no manejadas
 
-populate_db.py
+**populate_db.py**
 
 Script para poblar la base de datos con datos de prueba realistas:
 
@@ -193,9 +193,9 @@ Ventas y compras de ejemplo
 
 Productos con bajo stock
 
-CARACTERÍSTICAS PRINCIPALES
+# **CARACTERÍSTICAS PRINCIPALES**
 
-Autenticación y Autorización:
+**Autenticación y Autorización:**
 
 Login/logout para usuarios
 
@@ -203,7 +203,7 @@ Dos roles: administrador y cliente
 
 Protección de rutas según roles
 
-Gestión de Productos:
+**Gestión de Productos:**
 
 CRUD completo de productos
 
@@ -213,7 +213,7 @@ Búsqueda y filtrado
 
 Control de stock y alertas de bajo stock
 
-Gestión de Proveedores:
+**Gestión de Proveedores:**
 
 CRUD completo de proveedores
 
@@ -221,7 +221,7 @@ Soft delete (borrado lógico)
 
 Relación muchos-a-muchos con productos
 
-Carrito de Compras:
+**Carrito de Compras:**
 
 Añadir/eliminar productos
 
@@ -229,13 +229,13 @@ Actualizar cantidades
 
 Proceso de checkout
 
-Dashboard:
+**Dashboard:**
 
 Para administradores: gráficos de ventas, compras y beneficios
 
 Para clientes: historial de compras y productos recomendados
 
-Reportes Estadísticos:
+**Reportes Estadísticos:**
 
 Ventas por categoría
 
@@ -245,7 +245,7 @@ Proveedores más activos
 
 Valor total del inventario
 
-API:
+**API:**
 
 Endpoints para operaciones AJAX
 
@@ -253,33 +253,33 @@ Actualización dinámica de datos
 
 Gráficos interactivos
 
-POSIBLES PROBLEMAS Y SOLUCIONES
+# **POSIBLES PROBLEMAS Y SOLUCIONES**
 
-Error al iniciar la aplicación:
+**Error al iniciar la aplicación:**
 
 Verifica que todas las dependencias estén instaladas (pip install -r requirements.txt)
 
 Asegúrate de tener permisos de escritura en el directorio
 
-Problemas con la base de datos:
+**Problemas con la base de datos:**
 
 Elimina el archivo suministros.db y vuelve a iniciar la aplicación
 
 Ejecuta python populate_db.py para recrear los datos de prueba
 
-Errores de importación:
+**Errores de importación:**
 
 Verifica que todos los archivos estén en el mismo directorio
 
 No cambies los nombres de los archivos
 
-Problemas con el correo electrónico:
+**Problemas con el correo electrónico:**
 
 Configura correctamente las variables MAIL_* en main.py
 
 La configuración por defecto es para pruebas locales
 
-NOTAS ADICIONALES
+# **NOTAS ADICIONALES**
 
 La aplicación usa SQLite por defecto para facilitar las pruebas. Para producción, considera usar PostgreSQL o MySQL.
 
