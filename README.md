@@ -77,7 +77,7 @@ Esto creará:
 
 Ventas y compras de ejemplo
 
-**EJECUCIÓN**
+**Ejecución:**
 
 Inicia la aplicación: python main.py
 
